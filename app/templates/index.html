@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Data Fetcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Delhi High Court Case Fetcher</h1>
+        <form action="/search" method="POST">
+            <label for="case_type">Case Type:</label>
+            <select id="case_type" name="case_type" required>
+                <option value="W.P.(C)">W.P.(C) - Writ Petition (Civil)</option>
+                <option value="CS(OS)">CS(OS) - Civil Suit (Original Side)</option>
+                <option value="CRL.A">CRL.A - Criminal Appeal</option>
+                <option value="RFA">RFA - Regular First Appeal</option>
+            </select>
+
+            <label for="case_number">Case Number:</label>
+            <input type="number" id="case_number" name="case_number" required>
+
+            <label for="case_year">Filing Year:</label>
+            <input type="number" id="case_year" name="case_year" value="2024" required>
+
+            <button type="submit">Fetch Case Data</button>
+        </form>
+        <p class="note">Note: A browser window will open. Please solve the CAPTCHA and press Enter in your console to proceed.</p>
+    </div>
+</body>
+</html>

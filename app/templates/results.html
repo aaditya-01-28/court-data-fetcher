@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Case Details</h1>
+        <div class="result-item">
+            <strong>Parties' Names:</strong>
+            <p>{{ data.parties }}</p>
+        </div>
+        <div class="result-item">
+            <strong>Filing Date:</strong>
+            <p>{{ data.filing_date }}</p>
+        </div>
+        <div class="result-item">
+            <strong>Next Hearing Date:</strong>
+            <p>{{ data.next_hearing_date }}</p>
+        </div>
+        <div class="result-item">
+            <strong>Orders / Judgments (Recent):</strong>
+            <ul>
+                {% for order in data.orders %}
+                <li>
+                    <a href="{{ order.url }}" target="_blank">
+                        {{ order.text }} (Download PDF)
+                    </a>
+                </li>
+                {% else %}
+                <li>No orders found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/" class="back-link">Search Another Case</a>
+    </div>
+</body>
+</html>
