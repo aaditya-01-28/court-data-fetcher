@@ -1,7 +1,5 @@
-# app/scraper.py
-
 import time
-import undetected_chromedriver as uc # <-- IMPORT THE NEW LIBRARY
+import undetected_chromedriver as uc 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC

@@ -1,4 +1,3 @@
-# app/routes.py
 from flask import render_template, request, Blueprint
 from .scraper import fetch_case_data
 from .database import SessionLocal, log_query
