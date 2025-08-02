@@ -62,5 +62,3 @@ The server actively detects browser automation and returns a `404 Not Found` err
 1.  Masking the browser's user-agent.
 2.  Using `selenium-stealth` to patch the standard driver.
 3.  Switching to `undetected-chromedriver`, a specialized library designed to evade bot detection.
-
-Despite these efforts, the protection remained effective. Ultimately, the website became completely unavailable, serving a "File not found." error even to regular browsers. As per the internship guidelines to **"document blockers in the README rather than ghosting,"** this issue is documented as the project's primary impediment.
