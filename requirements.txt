@@ -1,6 +1,6 @@
 Flask
-selenium
-webdriver-manager
 SQLAlchemy
+psycopg2-binary
+undetected-chromedriver
+selenium
 python-dotenv
-selenium-stealth

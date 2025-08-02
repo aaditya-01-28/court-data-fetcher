@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 # Define the database connection
-DATABASE_URL = "sqlite:///queries.db"
+DATABASE_URL = "postgresql://postgres:yourpassword@localhost/court_app_db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
